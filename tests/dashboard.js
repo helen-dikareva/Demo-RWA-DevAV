@@ -2,7 +2,7 @@ import { navBar, toolbarMenu, DockPanel, pivotGrid } from '../page-model';
 import { checkPopupsVisibility } from '../helpers';
 
 fixture('Dashboard')
-    .page('https://demos.devexpress.com/RWA/DevAV/Dashboard.aspx');
+    .page('./Dashboard.aspx');
 
 const revenueAnalysisPanel    = new DockPanel('PivotGridPanel');
 const revenueSnapshotPanel    = new DockPanel('RevenueChartPanel');

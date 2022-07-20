@@ -3,7 +3,7 @@ import { Grid, Popup, getEditInput, navBar, toolbarMenu, ImageSlider } from '../
 import { checkPopupsVisibility } from '../helpers';
 
 fixture('Products')
-    .page('https://demos.devexpress.com/RWA/DevAV/Products.aspx');
+    .page('./Products.aspx');
 
 const grid = new Grid('ProductGrid');
 
