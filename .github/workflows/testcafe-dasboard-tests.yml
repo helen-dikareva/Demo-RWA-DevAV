@@ -5,6 +5,10 @@ on:
     branches:
       - '**'
 
+  workflow_dispatch:
+  schedule:
+    - cron:  '15 3 * * *'
+
 env:
   GITHUB_ACTION_RUNNER: true
   TESTCAFE_DASHBOARD_URL: https://ddev.testcafe.io
@@ -12,7 +16,7 @@ env:
 jobs:
   run-tests:
     runs-on: windows-2019
-    timeout-minutes: 35
+    timeout-minutes: 40
 
     steps:
       - name: Checkout
