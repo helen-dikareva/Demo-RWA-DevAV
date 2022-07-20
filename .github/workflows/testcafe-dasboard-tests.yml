@@ -1,0 +1,32 @@
+name: 'TestCafe Dashboard tests for ASP RWA project'
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+env:
+  GITHUB_ACTION_RUNNER: true
+  TESTCAFE_DASHBOARD_URL: https://ddev.testcafe.io
+
+jobs:
+  run-tests:
+    runs-on: windows-2019
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup node env
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: (npm i -g yarn) -and (yarn install)
+
+      - name: Run tests
+        env:
+          TESTCAFE_DASHBOARD_TOKEN: ${{ secrets.DASHBOARD_TOKEN }}
+        run: npm run test
