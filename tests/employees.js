@@ -3,7 +3,7 @@ import { Grid, Popup, CardView, PageControl, getEditInput, navBar, toolbarMenu }
 import { checkPopupsVisibility } from '../helpers';
 
 fixture('Employees')
-    .page('https://demos.devexpress.com/RWA/DevAV/Employees.aspx');
+    .page('./Employees.aspx');
 
 const mainGrid       = new Grid('EmployeesGrid');
 const evaluationGrid = new Grid('EvaluationGrid');

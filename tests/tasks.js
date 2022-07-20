@@ -3,7 +3,7 @@ import { Grid, CardView, getEditInput, navBar, toolbarMenu } from '../page-model
 import { checkPopupsVisibility } from '../helpers';
 
 fixture('Tasks')
-    .page('https://demos.devexpress.com/RWA/DevAV/Tasks.aspx');
+    .page('./Tasks.aspx');
 
 const mainGrid     = new Grid('TaskGrid');
 const cardViewGrid = new CardView('TaskCardView');
