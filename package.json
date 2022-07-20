@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome,firefox,edge ./tests"
+    "test": "testcafe chrome,firefox ./tests"
   },
   "keywords": [],
   "author": "",
